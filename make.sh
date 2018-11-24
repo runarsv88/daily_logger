@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Compiling Daily Logger project!"
-javac -d target/classes src/main/java/main.java
+javac -sourcepath src/main/java -d target/classes src/main/java/main.java
