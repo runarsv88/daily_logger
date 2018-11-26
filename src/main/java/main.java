@@ -1,8 +1,9 @@
-import com.dailylogger.logger;
+import com.dailylogger.Logger;
 
 public class main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
-        logger.sayHello();
+        Logger logger = new Logger();
+        logger.askForInput();
+        logger.askForAndWriteLog();
     }
 }
