@@ -2,10 +2,11 @@ package com.dailylogger;
 
 import java.util.Scanner;
 import java.nio.file.*;
-import java.io.IOException;
+import java.io.*;
+import javax.sound.sampled.*;
 
 import com.dailylogger.utils.Utils;
-import com.dailylogger.utils.MP3player;
+import com.dailylogger.utils.Sounds;
 
 public class Logger {
 
@@ -42,8 +43,13 @@ public class Logger {
     }
 
     public void playSound() {
-        MP3player player = new MP3player(soundPath);
-        player.playSound(repetitions);
+        Sounds player = new Sounds(soundPath);
+        player.playSound(3);
+        //try {
+            //Thread.sleep(10000);
+        //} catch (Exception e) {
+            //System.out.println("Ran into an issue here boss, meanwhile wating for shit to go down...");
+            //System.out.println(e);
+        //}
     }
-
 }
