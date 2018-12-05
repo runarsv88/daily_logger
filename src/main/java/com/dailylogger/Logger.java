@@ -11,6 +11,7 @@ public class Logger {
 
     private Scanner scr = new Scanner(System.in);
     private String soundPath;
+    private final Integer repetitions = 3;
 
     public Logger(String soundPath) {
         this.soundPath = soundPath;
@@ -42,7 +43,7 @@ public class Logger {
 
     public void playSound() {
         MP3player player = new MP3player(soundPath);
-        player.playSound();
+        player.playSound(repetitions);
     }
 
 }
