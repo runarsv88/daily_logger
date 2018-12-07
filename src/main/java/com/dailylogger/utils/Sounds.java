@@ -11,7 +11,6 @@ public class Sounds {
     }
 
     public void playSound(Integer numberOfTimes) {
-        System.out.println("Let's play a sound!");
         PlayerThread playerThread = new PlayerThread(numberOfTimes);
         playerThread.start();
     }
@@ -25,7 +24,6 @@ public class Sounds {
 
         public void run() {
             try{
-                System.out.println("Trying to play sound right about now!!!!!");
                 AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File(soundPath));
                 Clip clip = AudioSystem.getClip();
                 clip.open(audioIn);
